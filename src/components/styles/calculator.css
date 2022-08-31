@@ -1,0 +1,11 @@
+.calculator {
+    width: 500px;
+}
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    min-width: 100%;
+
+}
