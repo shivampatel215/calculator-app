@@ -10,10 +10,10 @@ const Display = ({ input, setInput, answer }) => {
     } ;
   
     return (
-      <>
+      
         <div className="display">
           {answer === "" ? (
-            <>
+            
               <input
                 type="text"
                 name="input"
@@ -23,7 +23,7 @@ const Display = ({ input, setInput, answer }) => {
                 onChange={handleInputChange}
                 autoComplete="off"
               />
-            </>
+            
           ) : (
             <>
               <input
@@ -39,12 +39,11 @@ const Display = ({ input, setInput, answer }) => {
                 name="value"
                 className="input"
                 value={answer}
-                disabled
+                
               />
             </>
           )}
         </div>
-      </>
     );
   };
   

@@ -11,15 +11,13 @@ function Calculator() {
     const [answer, setAnswer] = useState("");
 
     function handleInput(click) {
-        let val = click.target.innerText;
-        console.log(val, input);
-        let str = input + val;
-        if (str.length > 14) return;
+        let value = click.target.innerText;
+        let string = input + value;
     
         if (answer !== "") {
-          setInput(answer + val);
+          setInput(answer + value);
           setAnswer("");
-        } else setInput(str);
+        } else setInput(string);
     };
 
     function handleAllClear() {
@@ -27,7 +25,6 @@ function Calculator() {
         setAnswer("");
     }
     function handleAnswer() {
-        if (input === "") return;
         let result = 0;
         let finalexpression = input;
         finalexpression = finalexpression.replaceAll("x", "*");
@@ -36,7 +33,7 @@ function Calculator() {
         try {
           result = evaluate(finalexpression); 
         } catch (error) {
-          result = "Sorry too advanced for me"; //error.message;
+          result = "Sorry too advanced for me"; 
         }
         result ? setAnswer(result) : setAnswer(round(result, 3))
       };
