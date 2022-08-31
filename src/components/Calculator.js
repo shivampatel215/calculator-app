@@ -3,13 +3,13 @@ import Display from "./Display";
 import Buttons from "./Buttons";
 import "./styles/calculator.css";
 import {useState} from "react";
-import {evaluate, round, typeOf} from "mathjs";
+import {evaluate, round,} from "mathjs";
 
 function Calculator() {
 
     const [input, setInput] = useState("");
     const [answer, setAnswer] = useState("");
-    
+
     function handleInput(click) {
         let val = click.target.innerText;
         console.log(val, input);
